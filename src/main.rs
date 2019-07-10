@@ -20,11 +20,18 @@ fn main() {
 
     loop {
         let mut input = String::new();
+        print!("> ");
+        std::io::stdout().flush().unwrap();
+
         /* Yep input is text for now */
         match io::stdin().read_line(&mut input) {
             Ok(_bytes_read) => {
-                pm.dispatch(input);
-                // let response = pm.on_input(input);
+                /* Run app plugins against input */
+                let response = pm.input(input);
+
+                /* Run all plugins against this output */
+                pm.output(response);
+                println!("END");
             }
             Err(error) => println!("error: {}", error),
         }
