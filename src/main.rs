@@ -1,7 +1,9 @@
 use std::io;
+use std::io::Write;
 
 use logger::Logger;
 use plugin_manager::PluginManager;
+use pushover::Pushover;
 use relevant_greeter::RelevantGreeter;
 
 fn main() {
@@ -9,10 +11,12 @@ fn main() {
 
     let logger = Logger::new();
     let relevant_greeter = RelevantGreeter::new();
+    let pushover = Pushover::new();
 
     let mut pm = PluginManager::new();
     pm.add_events_hook(logger);
     pm.add_events_hook(relevant_greeter);
+    pm.add_events_hook(pushover);
 
     loop {
         let mut input = String::new();
