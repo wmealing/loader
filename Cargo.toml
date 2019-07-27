@@ -11,3 +11,4 @@ plugin_manager = { path = "../plugin_manager" }
 logger = { path = "../logger" }
 relevant_greeter = { path = "../relevant_greeter" }
 pushover = { path = "../pushover" }
+quitter = { path = "../quitter" }

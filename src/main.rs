@@ -5,6 +5,7 @@ use logger::Logger;
 use plugin_manager::PluginManager;
 use pushover::Pushover;
 use relevant_greeter::RelevantGreeter;
+use quitter::Quitter;
 
 fn main() {
     println!("Loader");
@@ -12,11 +13,14 @@ fn main() {
     let logger = Logger::new();
     let relevant_greeter = RelevantGreeter::new();
     let pushover = Pushover::new();
+    let quitter = Quitter::new();
 
     let mut pm = PluginManager::new();
+    
     pm.add_events_hook(logger);
     pm.add_events_hook(relevant_greeter);
     pm.add_events_hook(pushover);
+    pm.add_events_hook(quitter);
 
     loop {
         let mut input = String::new();
