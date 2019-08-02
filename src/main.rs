@@ -1,43 +1,54 @@
-use std::io;
 use std::io::Write;
+use std::io::{BufRead, BufReader};
+use std::os::unix::net::{UnixListener, UnixStream};
+use std::thread;
 
+/* Specific plugins, i should automate this */
 use logger::Logger;
 use plugin_manager::PluginManager;
 use pushover::Pushover;
-use relevant_greeter::RelevantGreeter;
 use quitter::Quitter;
+use relevant_greeter::RelevantGreeter;
 
-fn main() {
-    println!("Loader");
-
+fn handle_client(stream: UnixStream) {
+    /* I dont want this done in here every time this is ugly af */
     let logger = Logger::new();
     let relevant_greeter = RelevantGreeter::new();
     let pushover = Pushover::new();
     let quitter = Quitter::new();
 
     let mut pm = PluginManager::new();
-    
+
     pm.add_events_hook(logger);
     pm.add_events_hook(relevant_greeter);
     pm.add_events_hook(pushover);
     pm.add_events_hook(quitter);
 
-    loop {
-        let mut input = String::new();
-        print!("> ");
-        std::io::stdout().flush().unwrap();
+    write!(&stream, "{}", "> ").unwrap();
 
-        /* Yep input is text for now */
-        match io::stdin().read_line(&mut input) {
-            Ok(_bytes_read) => {
-                /* Run app plugins against input */
-                let response = pm.input(input);
+    let rd_stream = BufReader::new(&stream);
+    for line in rd_stream.lines() {
+        let response = pm.input(line.unwrap());
+        write!(&stream, "S: {}", response).unwrap();
+        pm.output(response);
+        write!(&stream, "{}", "\n> ").unwrap();
+    }
+}
 
-                /* Run all plugins against this output */
-                pm.output(response);
-                println!("END");
+fn main() {
+    println!("Starting..");
+
+    let listener = UnixListener::bind("/tmp/rust-uds.sock").unwrap();;
+
+    for stream in listener.incoming() {
+        match stream {
+            Ok(stream) => {
+                thread::spawn(|| handle_client(stream));
             }
-            Err(error) => println!("error: {}", error),
+            Err(err) => {
+                println!("Error: {}", err);
+                break;
+            }
         }
     }
 }
