@@ -1,17 +1,6 @@
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 
-<!-- PROJECT LOGO -->
-<br />
-
-<h1> The C O ⅃ L A R </h1>
+<h1> The C O ⅃ L A R - Software </h1>
 
 [![Build Status](https://travis-ci.org/wmealing/loader.svg?branch=master)](https://travis-ci.org/wmealing/loader)
 
