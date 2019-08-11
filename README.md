@@ -57,7 +57,6 @@ To get a local copy up and running follow these simple example steps.
 
 You'll need to have rust installed.
 
-* npm
 ```sh
 curl https://sh.rustup.rs -sSf | sh
 ```
@@ -65,6 +64,8 @@ curl https://sh.rustup.rs -sSf | sh
 This may ask you a number of questions, best to accept the defaults for now,
 at the moment the system is going to target x86, but this will be changing
 to ARM shortly.
+
+The goal is to have this running on the pi/beagleboard soon.
 
 
 ### Installation
