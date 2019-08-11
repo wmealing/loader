@@ -93,9 +93,12 @@ cargo build --release
 <!-- ROADMAP -->
 ## Roadmap
 
-[ ] Initial project started
-[ ] Wearable created
-[ ] Audio input / output.
+[X] Initial project started
+[-] Wearable designed ( see http://github.com/wadmealing/design/ )
+ - [ ] Wearable printed
+ - [ ] Added audio hardware
+ 
+[-] Audio input / output (ordered, awaiting hardware)
 
 
 
