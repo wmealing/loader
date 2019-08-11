@@ -94,10 +94,13 @@ cargo build --release
 ## Roadmap
 
 [X] Initial project started
+
 [-] Wearable designed ( see http://github.com/wadmealing/design/ )
+
  - [ ] Wearable printed
- - [ ] Added audio hardware
  
+ - [ ] Added audio hardware
+  
 [-] Audio input / output (ordered, awaiting hardware)
 
 
