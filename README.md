@@ -13,6 +13,8 @@
 
 <h1> The C O L L A R </h1>
 
+[![Build Status](https://travis-ci.org/wmealing/loader.svg?branch=master)](https://travis-ci.org/wmealing/loader)
+
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
