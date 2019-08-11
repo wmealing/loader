@@ -97,7 +97,7 @@ cargo build --release
 
 [X] Initial project started
 
-[-] Wearable designed ( see http://github.com/wademealing/design/ )
+[-] Wearable designed ( see http://github.com/wmealing/design/ )
 
  - [ ] Wearable printed
  
@@ -130,7 +130,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Your Name - [@wademealing](https://twitter.com/wademealing) -
 
-Project Link: [https://github.com/wademealing/loader](https://github.com/wademealing/loader)
+Project Link: [https://github.com/wmealing/loader](https://github.com/wmealing/loader)
 
 
 
