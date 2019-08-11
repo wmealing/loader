@@ -97,7 +97,7 @@ cargo build --release
 
 [X] Initial project started
 
-[-] Wearable designed ( see http://github.com/wadmealing/design/ )
+[-] Wearable designed ( see http://github.com/wademealing/design/ )
 
  - [ ] Wearable printed
  
