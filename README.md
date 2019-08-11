@@ -11,7 +11,7 @@
 <!-- PROJECT LOGO -->
 <br />
 
-<h1> The C O L L A R </h1>
+<h1> The C O ⅃ L ▢ R </h1>
 
 [![Build Status](https://travis-ci.org/wmealing/loader.svg?branch=master)](https://travis-ci.org/wmealing/loader)
 
