@@ -7,9 +7,7 @@ edition = "2018"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-plugin_manager = { git = "https://github.com/wmealing/plugin_manager" }
-logger = { git = "https://github.com/wmealing/logger" }
-relevant_greeter = { git = "https://github.com/wmealing/relevant_greeter" }
-pushover = { git = "https://github.com/wmealing/pushover" }
-quitter = { git = "https://github.com/wmealing/quitter" }
+plugin_manager = { git = "https://github.com/wmealing/plugin_manager", branch = "master" }
+
+
 
