@@ -24,11 +24,11 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The collar is a project that I'm working on to work and learn on pratical 'home
-assistant' without the home part. 
+The collar is a wearable hardware project intended to be a better assistant for when you're at home and when you're not.  It is an extensible hardware and software platform to suit my needs and maybe yours too.  I'm not going to stop you from hacking on this.
 
+The basic hardware of the rasbperr pi will be available and the standard pins available for sensors to be attached that the wearer may need.
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
+The pi zero apparently doesn't work well with both bluetooth or wifi enabled, not both.. maybe this can be overcome but I haven't figured it out yet.
 
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
@@ -86,16 +86,27 @@ cargo build --release
 
 [X] Initial project started
 
-[-] Wearable designed ( see http://github.com/wmealing/design/ )
+[eh] Wearable designed ( see http://github.com/wmealing/design/ )
 
- - [ ] Wearable printed
+ - [IN PROGRESS] Wearable printed
+
+ - [IN PROGRESS] Audio hardware
+   - [x] Ordered audio hardware
+   - [?] Order speaker
  
- - [ ] Added audio hardware
+ - [ ] Integrate with amazons transcribe service.
+ 
+ - [ ] Add recharge circuit. 
+
+- [ ] Write online plugin browser
   
-[-] Audio input / output (ordered, awaiting hardware)
+  - [ ] Make example plugin
 
+- [ ] Write a FAAS online service
 
-
+ - [ ]  Write an example FAAs.
+ 
+ 
 <!-- CONTRIBUTING -->
 ## Contributing
 
